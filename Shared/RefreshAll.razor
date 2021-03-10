@@ -1,0 +1,10 @@
+﻿@inject FunWithReflection.ViewModels.IRefreshAllViewModel vm
+
+<input type="button" @onclick="RefreshClicked" value="Refresh All" />
+@code {
+    protected void RefreshClicked()
+    {
+        vm.RefreshAll();
+    }
+
+}

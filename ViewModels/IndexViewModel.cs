@@ -14,10 +14,7 @@ namespace FunWithReflection.ViewModels
         {
 
             services = _services;
-            foreach(var x in typeof(App).Assembly.CreatableTypes().EndingWith("Service"))
-            {
-                services.GetServiceInstanceAndExecuteMethod(provider, x.GetInterfaces()[0], "Refresh");
-            }
+
         }
     }
 }
